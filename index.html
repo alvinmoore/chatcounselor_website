@@ -1,1 +1,42 @@
-index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Redirecting...</title>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-JR3WFHBDZV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-JR3WFHBDZV');
+  </script>
+
+  <script>
+    (function () {
+      const lang = navigator.language || navigator.userLanguage;
+      let redirectTo = 'en/index.html'; // default fallback
+
+      if (lang.startsWith('es')) {
+        redirectTo = 'es/index.html';
+      } else if (lang.startsWith('fr')) {
+        redirectTo = 'fr/index.html';
+      } else if (lang.startsWith('zh')) {
+        redirectTo = 'zh/index.html';
+      } else if (lang.startsWith('pt')) {
+        redirectTo = 'pt/index.html';
+      } else if (lang.startsWith('en')) {
+        redirectTo = 'en/index.html';
+      }
+
+      window.location.replace(redirectTo);
+    })();
+  </script>
+</head>
+<body>
+  <p>Redirecting to your language version...</p>
+</body>
+</html>
